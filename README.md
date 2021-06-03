@@ -94,3 +94,54 @@ Accuracy
 Now that you know that most of the data you have is valid, you’ll have to focus on establishing its accuracy. Even though the data is valid, it doesn’t mean the data is accurate. And determining accuracy helps you to figure out if the data you entered was accurate or not. 
 
 The address of a client could be in the right format, but it doesn’t need to be the right one. Maybe the email has an additional digit or character that makes it wrong. Another example is of the phone number of a customer. 
+
+Data Cleansing Techniques
+Your choice of data cleaning techniques relies on a lot of factors. First, what kind of data are you dealing with? Are they numeric values or strings? Unless you have too few values to handle, you shouldn’t expect to clean your data with just one technique as well.
+
+You might need to use multiple techniques for a better result. The more data types you have to handle, the more cleansing techniques you’ll have to use. Being familiar with all of these methods will help you in rectifying errors and getting rid of useless data. 
+
+1. Remove Irrelevant Values
+The first and foremost thing you should do is remove useless pieces of data from your system. Any useless or irrelevant data is the one you don’t need. It might not fit the context of your issue. 
+
+You might only have to measure the average age of your sales staff. Then their email address wouldn’t be required. Another example is you might be checking to see how many customers you contacted in a month. In this case, you wouldn’t need the data of people you reached in a prior month.
+
+However, before you remove a particular piece of data, make sure that it is irrelevant because you might need it to check its correlated values later on (for checking the consistency). And if you can get a second opinion from a more experienced expert before removing data, feel free to do so. 
+
+You wouldn’t want to delete some values and regret the decision later on. But once you’re assured that the data is irrelevant, get rid of it. 
+
+2. Get Rid of Duplicate Values
+Duplicates are similar to useless values – You don’t need them. They only increase the amount of data you have and waste your time. You can get rid of them with simple searches. Duplicate values could be present in your system for several reasons.
+
+Maybe you combined the data of multiple sources. Or, perhaps the person submitting the data repeated a value mistakingly. Some user clicked twice on ‘enter’ when they were filling an online form. You should remove the duplicates as soon as you find them. 
+
+3. Avoid Typos (and similar errors)
+Typos are a result of human error and can be present anywhere. You can fix typos through multiple algorithms and techniques. You can map the values and convert them into the correct spelling. Typos are essential to fix because models treat different values differently. Strings rely a lot on their spellings and cases.
+
+‘George’ is different from ‘george’ even though they have the same spelling. Similarly ‘Mike’ and ‘Mice’ are different from each other, also though they have the same number of characters. You’ll need to look for typos such as this and fix them appropriately. 
+
+Another error similar to typos is of strings’ size. You might need to pad them to keep them in the same format. For example, your dataset might require you to have 5-digit numbers only. So if you have any value which only has four digits such as ‘3994’ you can add a zero in the beginning to increase its number of digits.
+
+Its value would remain the same as ‘03994’, but it’ll keep your data uniform. An additional error with strings is of white spaces. Make sure you remove them from your strings to keep them consistent. 
+
+4. Convert Data Types
+Data types should be uniform across your dataset. A string can’t be numeric nor can a numeric be a boolean. There are several things you should keep in mind when it comes to converting data types:
+
+Keep numeric values as numerics
+Check whether a numeric is a string or not. If you entered it as a string, it would be incorrect. 
+If you can’t convert a specific data value, you should enter ‘NA value’ or something of this sort. Make sure you add a warning as well to show that this particular value is wrong.
+5. Take Care of Missing Values
+There would always be a piece of missing data. You can’t avoid it. So you should know how to handle them to keep your data clean and free from errors. A particular column in your dataset may have too many missing values. In that case, it would be wise to get rid of the entire column because it doesn’t have enough data to work with.
+
+Point to note: You shouldn’t ignore missing values.
+
+Ignoring missing values can be a significant mistake because they will contaminate your data, and you won’t get accurate results. There are multiple ways to deal with missing values. 
+
+Imputing Missing Values:
+
+You can impute missing values, which means, assuming the approximate value. You can use linear regression or median to calculate the missing value. However, this method has its implications because you can’t be sure if that would be the real value. 
+
+Another method to impute missing values is to copy the data from a similar dataset. This method is called ‘Hot-deck imputation’. You’re adding value in your current record while considering some constraints such as data-type and range. 
+
+Highlighting Missing Values:
+
+Imputation isn’t always the best measure to take care of missing values. Many experts argue that it only leads to more mixed results as they are not ‘real’. So, you can take another approach and inform the model that the data is missing. Telling the model (or the algorithm) that the specific value is unavailable can be a piece of information as well. 
